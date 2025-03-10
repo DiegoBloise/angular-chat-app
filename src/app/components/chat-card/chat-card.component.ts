@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { format, isToday, isThisWeek, isThisYear } from 'date-fns';
-import { Chat } from '../../models/chat.model';
-import { Tag } from 'primeng/tag';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { format, isThisWeek, isThisYear, isToday } from 'date-fns';
+import { ButtonModule } from 'primeng/button';
 import { Ripple } from 'primeng/ripple';
+import { Tag } from 'primeng/tag';
+import { Chat } from '../../models/chat.model';
 @Component({
   selector: 'app-chat-card',
   templateUrl: './chat-card.component.html',
   styleUrls: ['./chat-card.component.scss'],
-  imports: [CommonModule, Tag, Ripple],
+  imports: [CommonModule, Tag, Ripple, ButtonModule],
 })
 export class ChatCardComponent {
   @Input() chat!: Chat;

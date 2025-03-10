@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChatCardComponent } from '../chat-card/chat-card.component';
-import { ChatService } from '../../services/chat.service';
 import { Chat } from '../../models/chat.model';
+import { ChatService } from '../../services/chat.service';
+import { ChatCardComponent } from '../chat-card/chat-card.component';
 
 @Component({
   selector: 'app-chat-list',
