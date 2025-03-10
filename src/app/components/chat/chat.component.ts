@@ -9,8 +9,6 @@ import { Chat } from '../../models/chat.model';
   styleUrls: ['./chat.component.scss'],
 })
 export class ChatComponent implements OnInit {
-  userId!: string;
-
   chat!: Chat | undefined;
 
   constructor(
@@ -20,9 +18,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.userId = params['userId'];
+      this.chat = this.chatService.getChatById(params['userId']);
     });
-
-    this.chat = this.chatService.getChatById(this.userId);
   }
 }
