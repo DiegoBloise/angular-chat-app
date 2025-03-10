@@ -1,0 +1,35 @@
+<div
+  pRipple
+  (click)="onChatPress()"
+  class="flex flex-row p-2.5 bg-[#333] hover:bg-[#444] items-center select-none cursor-pointer"
+>
+  <img
+    [src]="chat.image"
+    alt="User Profile"
+    class="w-16 rounded-full mr-2.5 border-2 border-white"
+  />
+
+  <div class="flex-1 p-ripple">
+    <div class="flex flex-row justify-between">
+      <span class="text-[#fff] font-bold">{{ chat.title }}</span>
+      <span class="text-[#707579] text-[0.75rem]">{{
+        lastMessageDateFormatted
+      }}</span>
+    </div>
+
+    <div class="flex flex-row items-center justify-between mt-0">
+      <span class="text-[#707579] flex-1 mr-2.5" [title]="chat.lastMessage">{{
+        chat.lastMessage | slice : 0 : 42
+      }}</span>
+
+      @if (chat.unreadMessagesCounter > 0) {
+      <p-tag
+        rounded
+        class="text-4xl"
+        [value]="chat.unreadMessagesCounter.toString()"
+        severity="secondary"
+      />
+      }
+    </div>
+  </div>
+</div>
