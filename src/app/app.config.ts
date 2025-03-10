@@ -681,6 +681,7 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: MyPreset,
       },
+      ripple: true,
     }),
     provideHttpClient(),
   ],

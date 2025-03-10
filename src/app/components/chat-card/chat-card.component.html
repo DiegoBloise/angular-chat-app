@@ -6,20 +6,20 @@
   <img
     [src]="chat.image"
     alt="User Profile"
-    class="w-16 rounded-full mr-2.5 border-2 border-zinc-300"
+    class="w-16 rounded-full mr-2.5 border-2 border-zinc-200"
     draggable="false"
   />
 
   <div class="flex-1 p-ripple">
     <div class="flex flex-row justify-between">
       <span class="font-bold">{{ chat.title }}</span>
-      <span class="text-zinc-500 text-[0.75rem]">{{
+      <span class="text-zinc-400 text-[0.75rem]">{{
         lastMessageDateFormatted
       }}</span>
     </div>
 
     <div class="flex flex-row items-center justify-between mt-0">
-      <span class="text-zinc-500 flex-1 mr-2.5" [title]="chat.lastMessage">
+      <span class="text-zinc-400 flex-1 mr-2.5" [title]="chat.lastMessage">
         {{
           chat.lastMessage.length > 39
             ? (chat.lastMessage | slice : 0 : 42) + "..."
