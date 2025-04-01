@@ -19,13 +19,9 @@
     </div>
 
     <div class="flex flex-row items-center justify-between mt-0">
-      <span class="text-zinc-400 flex-1 mr-2.5" [title]="chat.lastMessage">
-        {{
-          chat.lastMessage.length > 39
-            ? (chat.lastMessage | slice : 0 : 42) + "..."
-            : chat.lastMessage
-        }}
-      </span>
+      <span class="text-zinc-400 flex-1 mr-2.5 line-clamp-1">{{
+        chat.lastMessage
+      }}</span>
 
       @if (chat.unreadMessagesCounter > 0) {
       <p-tag
