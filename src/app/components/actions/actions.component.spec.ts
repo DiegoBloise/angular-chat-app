@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RandomEmojiComponent } from './random-emoji.component';
+import { ActionsComponent } from './actions.component';
 
-describe('RandomEmojiComponent', () => {
-  let component: RandomEmojiComponent;
-  let fixture: ComponentFixture<RandomEmojiComponent>;
+describe('ActionsComponent', () => {
+  let component: ActionsComponent;
+  let fixture: ComponentFixture<ActionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RandomEmojiComponent],
+      imports: [ActionsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RandomEmojiComponent);
+    fixture = TestBed.createComponent(ActionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

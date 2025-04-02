@@ -1,5 +1,5 @@
 <div
-  class="bg-zinc-900 w-screen md:w-100 sm:w-[50vw] lg:w-142 h-screen overflow-auto"
+  class="flex flex-col bg-zinc-900 w-screen md:w-100 sm:w-[50vw] lg:w-142 max-h-[calc(100vh-60px)] overflow-y-auto"
 >
   @for (chat of chats; track chat.id) {
   <app-chat-card

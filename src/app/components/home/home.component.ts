@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { ChatListComponent } from '../chat-list/chat-list.component';
+import { ActionsComponent } from '../actions/actions.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet, ChatListComponent],
+  imports: [RouterOutlet, ChatListComponent, ActionsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

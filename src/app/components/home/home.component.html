@@ -1,6 +1,9 @@
-<div class="flex flex-row">
-  <app-chat-list />
-  <div class="hidden sm:block w-screen h-screen chat-background">
+<div class="flex flex-row h-screen">
+  <div>
+    <app-actions />
+    <app-chat-list />
+  </div>
+  <div class="hidden sm:block w-screen chat-background">
     <router-outlet />
   </div>
 </div>

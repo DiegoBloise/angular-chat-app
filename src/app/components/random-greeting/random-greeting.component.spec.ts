@@ -8,9 +8,8 @@ describe('RandomGreetingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RandomGreetingComponent]
-    })
-    .compileComponents();
+      imports: [RandomGreetingComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RandomGreetingComponent);
     component = fixture.componentInstance;

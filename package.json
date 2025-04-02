@@ -17,6 +17,8 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@ng-icons/core": "^31.2.0",
+    "@ng-icons/mynaui": "^31.2.0",
     "@primeng/themes": "^19.0.9",
     "@tailwindcss/postcss": "^4.0.12",
     "angular-projects": "file:",

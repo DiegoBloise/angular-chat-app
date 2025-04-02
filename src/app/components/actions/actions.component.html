@@ -1,0 +1,58 @@
+<div
+  class="h-[60px] pl-1 pr-3 py-1 flex flex-row justify-center items-center gap-2"
+>
+  <p-menu
+    #menu
+    [model]="items"
+    class="flex justify-center"
+    styleClass="w-full md:w-60"
+    [popup]="true"
+  >
+    <ng-template #start>
+      <a
+        routerLink="/profile"
+        pRipple
+        class="p-menu-item-link relative overflow-hidden w-full border-0 bg-transparent flex items-center p-2 pl-3 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-none cursor-pointer transition-colors duration-200"
+      >
+        <p-avatar
+          image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+          class="mr-2"
+          shape="circle"
+        />
+        <span class="inline-flex flex-col pl-1">
+          <span class="font-bold">Amy Elsner</span>
+        </span>
+      </a>
+    </ng-template>
+    <ng-template #item let-item>
+      <a
+        [routerLink]="item.route"
+        pRipple
+        class="flex items-center p-menu-item-link"
+      >
+        <ng-icon [name]="item.icon" size="24" />
+        <span class="ml-2">{{ item.label }}</span>
+      </a>
+    </ng-template>
+  </p-menu>
+  <p-button
+    variant="text"
+    severity="contrast"
+    size="large"
+    (click)="menu.toggle($event)"
+    rounded
+  >
+    <ng-icon name="mynaMenu" size="24" />
+  </p-button>
+  <p-iconfield class="w-full!">
+    <p-inputicon class="top-[40%]!">
+      <ng-icon name="mynaSearch" size="24" />
+    </p-inputicon>
+    <input
+      type="text"
+      pInputText
+      placeholder="Search"
+      class="rounded-full! w-full!"
+    />
+  </p-iconfield>
+</div>
