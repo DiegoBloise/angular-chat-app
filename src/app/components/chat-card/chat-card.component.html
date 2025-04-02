@@ -1,25 +1,25 @@
 <div
   pRipple
   (click)="onChatPress()"
-  class="flex flex-row px-4 py-2 bg-zinc-900 hover:bg-zinc-700 items-center select-none cursor-pointer"
+  class="flex flex-row px-4 py-2 mx-2 dark:bg-surface-900 hover:bg-surface-100 dark:hover:bg-surface-800 items-center select-none cursor-pointer rounded-2xl"
 >
   <img
     [src]="chat.image"
     alt="User Profile"
-    class="w-16 rounded-full mr-2.5 border-2 border-zinc-200"
+    class="w-16 rounded-full mr-2.5 border-2 border-surface-200"
     draggable="false"
   />
 
   <div class="flex-1 p-ripple">
     <div class="flex flex-row justify-between">
       <span class="font-bold line-clamp-1">{{ chat.title }}</span>
-      <span class="text-zinc-400 text-[0.75rem]">{{
+      <span class="text-surface-400 text-[0.75rem]">{{
         lastMessageDateFormatted
       }}</span>
     </div>
 
     <div class="flex flex-row items-center justify-between mt-0">
-      <span class="text-zinc-400 flex-1 mr-2.5 line-clamp-1">{{
+      <span class="text-surface-400 flex-1 mr-2.5 line-clamp-1">{{
         chat.lastMessage
       }}</span>
 
