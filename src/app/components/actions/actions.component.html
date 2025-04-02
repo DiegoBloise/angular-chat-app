@@ -1,11 +1,5 @@
 <div class="h-[60px] pl-1 pr-3 py-1 flex flex-row items-center gap-2">
-  <p-menu
-    #menu
-    [model]="items"
-    class="flex justify-center"
-    styleClass="w-full md:w-60"
-    [popup]="true"
-  >
+  <p-menu #menu [model]="items" class="flex justify-center" [popup]="true">
     <ng-template #start>
       <a
         routerLink="/profile"
@@ -38,7 +32,7 @@
     severity="contrast"
     size="large"
     (click)="menu.toggle($event)"
-    rounded
+    styleClass="rounded-[100%]! p-2!"
   >
     <ng-icon name="mynaMenu" size="24" />
   </p-button>

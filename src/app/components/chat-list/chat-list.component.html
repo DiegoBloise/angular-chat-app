@@ -1,9 +1,9 @@
 <!-- Actions topbar height
-max-h-[calc(60vh-120px)] -->
+max-h-[calc(60vh-60px)] -->
 <div
   class="flex flex-col bg-zinc-900 w-screen md:w-100 sm:w-[50vw] lg:w-142 max-h-[calc(100vh-60px)] overflow-auto"
 >
-  <p-tabs value="0" scrollable class="p-0">
+  <p-tabs [value]="0" scrollable class="p-0">
     <p-tablist>
       @for (tab of tabs; track tab.value) {
       <p-tab [value]="tab.value">{{ tab.title }}</p-tab>
