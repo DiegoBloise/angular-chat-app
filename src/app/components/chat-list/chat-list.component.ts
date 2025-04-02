@@ -27,8 +27,8 @@ export class ChatListComponent implements OnInit {
     this.tabs = [
       { title: 'All', value: 0, chats: this.chats },
       { title: 'Unread', value: 1, chats: this.chats },
-      { title: 'Personal', value: 3, chats: this.chats },
-      { title: 'Family', value: 4, chats: this.chats },
+      { title: 'Personal', value: 2, chats: this.chats },
+      { title: 'Family', value: 3, chats: this.chats },
       { title: 'Friends', value: 4, chats: this.chats },
       { title: 'Work', value: 5, chats: this.chats },
       { title: 'Bots', value: 6, chats: this.chats },
