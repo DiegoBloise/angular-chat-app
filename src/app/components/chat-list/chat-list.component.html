@@ -1,8 +1,6 @@
 <!-- Actions topbar height
 max-h-[calc(60vh-60px)] -->
-<div
-  class="flex flex-col w-screen md:w-100 sm:w-[50vw] lg:w-142 max-h-[calc(100vh-60px)] overflow-auto"
->
+<div class="flex flex-col w-screen md:w-100 sm:w-[50vw] lg:w-142">
   <p-tabs #tabComponent [value]="0" scrollable class="p-0">
     <p-tablist>
       @for (tab of tabs; track tab.value) {
@@ -10,8 +8,8 @@ max-h-[calc(60vh-60px)] -->
         class="p-3! mr-1! rounded-t-lg! dark:bg-surface-900! border-t-0!  border-b-2!
         {{
           tabComponent.value() == tab.value
-            ? 'dark:hover:bg-primary-950! border-b-primary!'
-            : 'dark:hover:bg-surface-700!'
+            ? 'dark:hover:bg-primary-950! hover:bg-primary-200! border-b-primary!'
+            : 'dark:hover:bg-surface-700! hover:bg-surface-200!'
         }}
         "
         [value]="tab.value"
@@ -19,7 +17,7 @@ max-h-[calc(60vh-60px)] -->
       >
       }
     </p-tablist>
-    <p-tabpanels class="p-0! py-2!">
+    <p-tabpanels class="p-0! py-2! overflow-auto! max-h-[calc(100vh-110px)]!">
       @for (tab of tabs; track tab.value) {
       <p-tabpanel [value]="tab.value">
         @for (chat of tab.chats; track chat.id) {
