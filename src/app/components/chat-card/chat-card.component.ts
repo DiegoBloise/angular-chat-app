@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { format, isThisWeek, isThisYear, isToday } from 'date-fns';
 import { ButtonModule } from 'primeng/button';
 import { Ripple } from 'primeng/ripple';
@@ -11,13 +11,13 @@ import { Chat } from '../../models/chat.model';
   styleUrls: ['./chat-card.component.scss'],
   imports: [CommonModule, Tag, Ripple, ButtonModule],
 })
-export class ChatCardComponent {
+export class ChatCardComponent implements OnInit {
   @Input() chat!: Chat;
   @Output() handleChatPress: EventEmitter<void> = new EventEmitter();
 
   lastMessageDateFormatted: string = '';
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.lastMessageDateFormatted = this.formatMessageDate(
       this.chat.lastMessageDate
     );
